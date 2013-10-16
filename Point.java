@@ -10,7 +10,7 @@ public class Point {
     /**
      * Constants in pixels for determining and locating valid Points on the grid.
      */
-	public static final int[] PIXEL_VALUES = getPixelValues();
+    public static final int[] PIXEL_VALUES = getPixelValues();
     public static final int NORTH = 0;
     public static final int NORTHEAST = 45;
     public static final int EAST = 90;
@@ -26,15 +26,15 @@ public class Point {
      * Instance variables that represent a Cartesian (pixel) point on the grid.
      */
     private int x;
-	private int y;
+    private int y;
 
     /**
      * Class constructor initalizes this to (0, 0), which is off the grid.
      */
-	public Point() {
-    	x = 0;
-    	y = 0;
-	}
+    public Point() {
+        x = 0;
+        y = 0;
+    }
 
     /**
      * Class constructor that sets x and y to given parameters.

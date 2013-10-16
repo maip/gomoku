@@ -39,9 +39,9 @@ public class Display extends JPanel implements KeyListener, MouseListener {
      * Class constructor initalizes this to receive input from mouse click and
      * Enter key.
      */
-	public Display() {
+    public Display() {
         this.addKeyListener(this);
-    	this.addMouseListener(this);
+        this.addMouseListener(this);
         this.setFocusable(true);
         currentLocation = new Point();
         playerOneMoves = new ArrayList<Point>();
@@ -49,18 +49,18 @@ public class Display extends JPanel implements KeyListener, MouseListener {
         isPlayerOneTurn = true;
         hasPlayerOneWon = false;
         hasPlayerTwoWon = false;
-	}
+    }
 
     /**
      * Update the display every turn or after receiving input.
      *
      * @params g  Graphics object to draw
      */
-	public void paint(Graphics g) {
+    public void paint(Graphics g) {
         super.paint(g);
         drawGrid(g);
         drawAllCircles(g);
-	}
+    }
 
     /**
      * Draw a 15x15 black grid using class constants.
@@ -187,7 +187,7 @@ public class Display extends JPanel implements KeyListener, MouseListener {
      * @params e  mouse click input
      */
     @Override
-	public void mouseClicked(MouseEvent e) {
+    public void mouseClicked(MouseEvent e) {
         if (!hasPlayerOneWon && !hasPlayerTwoWon) {
             Point newLocation = Point.convertFromPixel(e.getX(), e.getY());
             if (isPlayerOneTurn) {
