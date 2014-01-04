@@ -39,8 +39,8 @@ public class Point {
     /**
      * Class constructor that sets x and y to given parameters.
      *
-     * @params newX  distance on horizontal x-axis
-     * @params newY  distance on vertical y-axis
+     * @param  newX distance on horizontal x-axis
+     * @param  newY distance on vertical y-axis
      */
     public Point(int newX, int newY) {
         x = newX;
@@ -77,22 +77,22 @@ public class Point {
     /**
      * Mutator method for x.
      *
-     * @params newX  distance on horizontal x-axis
+     * @param  newX distance on horizontal x-axis
      */
     public void setX(int newX) { x = newX; }
 
     /**
      * Mutator method for y.
      *
-     * @params y  distance on vertical y-axis
+     * @param  y distance on vertical y-axis
      */
     public void setY(int newY) { y = newY; }
 
     /**
      * Mutator method for both x and y.
      *
-     * @params newX  distance on horizontal x-axis
-     * @params newY  distance on vertical y-axis
+     * @param  newX distance on horizontal x-axis
+     * @param  newY distance on vertical y-axis
      */
     public void setAll(int newX, int newY) {
         x = newX;
@@ -111,8 +111,8 @@ public class Point {
     /**
      * Compare two Point objects by content.
      *
-     * @params obj generic Object that should be a Point
-     * @return     true if this is equal to obj else false
+     * @param  obj generic Object that should be a Point
+     * @return     true if this is equal to obj
      */
     @Override
     public boolean equals(Object obj) {
@@ -130,8 +130,8 @@ public class Point {
     /**
      * Get closest Point value given a pixel distance.
      *
-     * @params px  the pixel distance of either x or y
-     * @return     valid Point value closest to pixel
+     * @param  px the pixel distance of either x or y
+     * @return    valid Point value closest to pixel
      */
     private static int roundToPointValue(int px) {
         int min = 1000;  // cannot be a possible min value
@@ -151,9 +151,9 @@ public class Point {
      *
      * For example: 25px x 25px is (1, 1) Point on the grid.
      *
-     * @params x  distance on horizontal x-axis
-     * @params y  distance on vertical y-axis
-     * @return    the closest Point object
+     * @param  x distance on horizontal x-axis
+     * @param  y distance on vertical y-axis
+     * @return   the closest Point object
      */
     public static Point convertFromPixel(int x, int y) {
         int newX = Point.roundToPointValue(x);
@@ -164,8 +164,8 @@ public class Point {
     /**
     * Get adjacent Point in the given direction.
     *
-    * @params dir  the direction in which to look for a Point
-    * @return      the adjacent Point or null if out of bounds of the grid
+    * @param  dir the direction in which to look for a Point
+    * @return     the adjacent Point or null if out of bounds of the grid
     */
     public Point getAdjacent(int dir) {
         int newX = 0;

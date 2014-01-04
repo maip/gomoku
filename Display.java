@@ -54,7 +54,7 @@ public class Display extends JPanel implements KeyListener, MouseListener {
     /**
      * Update the display every turn or after receiving input.
      *
-     * @params g  Graphics object to draw
+     * @param  g Graphics object to draw
      */
     public void paint(Graphics g) {
         super.paint(g);
@@ -65,7 +65,7 @@ public class Display extends JPanel implements KeyListener, MouseListener {
     /**
      * Draw a 15x15 black grid using class constants.
      *
-     * @params g  Graphics object to draw lines
+     * @param  g Graphics object to draw lines
      */
     private void drawGrid(Graphics g) {
         g.setColor(Color.black);
@@ -82,7 +82,7 @@ public class Display extends JPanel implements KeyListener, MouseListener {
      * 
      * Player 1 is white and moves first. Player 2 is black and moves second.
      *
-     * @params g  Graphics object to draw circles
+     * @param  g Graphics object to draw circles
      */
     private void drawAllCircles(Graphics g) {
         drawCircle(g, playerOneMoves, Color.WHITE);
@@ -92,9 +92,9 @@ public class Display extends JPanel implements KeyListener, MouseListener {
     /**
      * Draw pieces at specified locations given by a list of Points.
      *
-     * @params g      Graphics object to draw circles
-     * @params moves  list of Points containing locations where pieces should be
-     * @params col    color of pieces
+     * @param  g     Graphics object to draw circles
+     * @param  moves list of Points containing locations where pieces should be
+     * @param  col   color of pieces
      */
     private static void drawCircle(Graphics g, ArrayList<Point> moves, Color col) {
         for (Point piece: moves) {
@@ -148,10 +148,10 @@ public class Display extends JPanel implements KeyListener, MouseListener {
     /**
      * Check for additional consecutive pieces and report win.
      *
-     * @params moves  list of Points containing locations where pieces should be
-     * @params loc    starting location to check adjacent Points
-     * @params dir    direction in which to look for adjacent pieces
-     * @params num    number of times to check in a row
+     * @param  moves list of Points containing locations where pieces should be
+     * @param  loc   starting location to check adjacent Points
+     * @param  dir   direction in which to look for adjacent pieces
+     * @param  num   number of times to check in a row
      */
     private static boolean checkInRow(ArrayList<Point> moves, Point loc, int dir,
             int num) {
@@ -184,7 +184,7 @@ public class Display extends JPanel implements KeyListener, MouseListener {
      * Set location from mouse click and make call to update display.
      * Freeze the display if the game is over.
      * 
-     * @params e  mouse click input
+     * @param  e mouse click input
      */
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -235,7 +235,7 @@ public class Display extends JPanel implements KeyListener, MouseListener {
     /**
      * Clear the board for a new game if Enter key is pressed.
      *
-     * @params e  key input
+     * @param  e key input
      */
     @Override
     public void keyPressed(KeyEvent e) {
